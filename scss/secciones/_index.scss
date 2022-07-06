@@ -1,0 +1,270 @@
+.inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header header"
+        "titulo titulo titulo titulo"
+        "innew innew innew innew"
+        "articulos articulos articulos articulos "
+        "footer footer footer footer";
+    background-image: url(https://res.cloudinary.com/dai0nag2c/image/upload/v1656989580/primer%20sitio%20web/139bb3de62f56f63a594c9a2b2558175_1_bjhy7j.bmp);
+    background-repeat: no-repeat;
+
+    .animate__animated.animate__fadeIn {
+        --animate-duration: 3.5s;
+      }
+
+    .titulo {
+        grid-area: titulo;
+        width: 100%;
+        height: 65vh;
+        display: flex;
+        justify-content: center; 
+        text-align: center;
+        align-items: center;
+      
+
+        h1{
+            width: 625px;
+            font-size: 432px;
+            font-family:$principal;
+             color: rgb(255, 255, 255);
+        }
+
+        h3{
+            width: 100%;
+            margin: 0px; 
+            height: 85px;
+            font-size:85px;
+            position: absolute; 
+            font-family:$subprincipal ;
+            color: rgb(255, 255, 255);
+            background-image: url(https://res.cloudinary.com/dai0nag2c/image/upload/v1656988638/primer%20sitio%20web/9dadd959cecbdb2eaca451bd852fbed6_2_n9wbgf.jpg);
+            background-position: top;
+            background-repeat: no-repeat;
+            
+        }
+    }
+
+    .innew {
+        grid-area: innew;
+        margin-top: 155px;
+        height: 65vh;
+        font-family: 'Castoro', serif;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+        background-image: url(https://res.cloudinary.com/dai0nag2c/image/upload/v1657022544/primer%20sitio%20web/f44b94bac459a61b9f73b4895b702675_ljcj28.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        outline: 8px double rgb(255, 255, 255);
+        outline-offset: -20px;
+
+        h2{
+            height: 150px;
+            font-size: 150px;
+            font-family: 'Bungee Outline', "cursive";
+            margin-bottom: 10px;   
+            color: transparent;
+            -webkit-text-stroke:3px rgb(0, 0, 0) ;
+        }
+
+        p{
+            font-size: 25px; 
+            color: rgb(0, 0, 0);
+            border-top: 2px solid rgb(0, 0, 0) ;
+            border-bottom: 2px solid rgb(0, 0, 0) ;
+        }
+
+        button{
+            margin: 15px;
+            padding: 8px 25px 8px 25px;
+            background-color: rgb(255, 164, 164);
+            border-radius:5px;
+            border: 2px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+        
+        
+             &:hover{
+                color: rgb(255, 255, 255);
+             border: 2px solid rgb(255, 255, 255);
+            }
+        }
+    }
+    .articulos {
+        grid-area: articulos;
+        display: flex;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        img{
+            &:hover {
+            transition: .9s;
+            transform: scale(1.1);
+            }  
+        }     
+    }
+}
+
+
+@media (max-width:779px){
+    .inicio{
+        background-size: 1000px;
+        background-repeat: no-repeat;
+        width: 100%;
+
+        .titulo{
+            height: 60vh;
+
+            h1{
+                width: 100%;
+                font-size: 280px;
+            }
+
+            h3{
+                background-image: none;
+                color: black;
+                font-size:70px;
+            }
+        }
+
+        .innew{
+            margin-top: 80px;
+            background-size : 114%;
+            height: 54vh;
+            outline-offset: -40px;
+            background-image: url(https://res.cloudinary.com/dai0nag2c/image/upload/v1657039272/primer%20sitio%20web/f44b94bac459a61b9f73b4895b702675_mdux6g.jpg) ;
+            
+            h2{
+                font-size: 100px;
+                max-height: 92px;
+                
+            }
+        }
+
+
+
+        .articulos {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 30px 0px 30px 0px;
+
+            img {
+                width: 220px;
+                height: 220px;
+                margin: 20px;
+            }
+        }
+    }
+} 
+@media(max-width:580px){
+        .inicio{
+            background-size: 915px;
+            background-repeat: no-repeat;
+            width: 100%;
+    
+            .titulo{
+                height: 46vh;
+                margin-bottom: 50px;
+    
+                h1{
+                    width: 100%;
+                    font-size: 220px;
+                }
+    
+                h3{
+                    background-image: none;
+                    color: black;
+                    font-size:55px;
+                }
+            }
+
+        .innew{
+            margin-top: 49px;
+            background-size : 120%;
+            height: 49vh;
+            outline-offset: -43px;
+            
+            h2{
+                font-size: 90px;
+                max-height: 75px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+
+            button{
+                margin: 10px;
+                padding: 6px 22px 6px 22px;
+                border-radius: 5px;
+            }
+        }
+
+        .articulos {
+
+            img {
+                width: 180px;
+                height: 180px;
+                margin: 5px
+
+            }
+        }
+    }
+}
+@media(max-width:437px){
+    .inicio{
+        background-size: 720px;
+
+        .titulo{
+            height: 34vh;
+            margin-bottom: none;
+
+            h1{
+                font-size: 142px;
+            }
+
+            h3{
+                background-image: none;
+                color: black;
+                font-size:55px;
+            }
+        }
+
+    .innew{
+        margin-top: 2px;
+        background-size : 120%;
+        height: 246px;
+        outline-offset: -51px;
+        
+        h2{
+            font-size: 65px;
+            max-height: 56px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+
+        button{
+            margin: 6px;
+            padding: 4px 22px 4px 22px;
+            border-radius: 5px;
+        }
+    }
+ 
+
+        .articulos {
+
+            img {
+                width: 150px;
+                height: 150px;
+                margin: 5px
+            }
+        }    
+    }
+}
